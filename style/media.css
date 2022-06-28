@@ -1,0 +1,115 @@
+@media (max-width: 1230px) {
+    .nav-list {
+        display: none; /*Скрытие мобильного блока меню*/
+    }
+
+    .nav-button {
+        display: block; /*Открытие мобильного блока меню*/
+    }
+
+    .nav.open .nav-list {
+        position: fixed; /*Позиция блока меню фиксированная*/
+        top: 0; /*Верх (растягиваем блок меню во все стороны)*/
+        bottom: 0; /*Низ (растягиваем блок меню во все стороны)*/
+        left: 0; /*Лево (растягиваем блок меню во все стороны)*/
+        right: 0; /*Право (растягиваем блок меню во все стороны)*/
+        background-color: #fff; /*Цвет фона всплывающего меню*/
+
+        z-index: 1;
+        padding: 46px 30px; /*верх и низ по 46, лево и право по 30*/
+        display: flex; /*Панель меню поверх сайта*/
+        flex-direction: column; /*Выстраиваем пункты меню в одну колонку*/
+        row-gap: 40px; /*Отступ между элементами меню 40*/
+
+        font-size: 34px; /*Размер шрифта меню*/
+        font-weight: 600; /*Толщина шрифта*/
+    }
+
+    .nav-link {
+        color: #828282; /*Пункты меню серые*/
+    }
+
+    .nav-link.active {
+        color: #000; /*Первый пункт меню черный*/
+    }
+
+    .nav-button {
+        position: absolute; /*Позиция кнопки верху, придется скролить при просмотре*/
+        z-index: 9; /*Видимость кнопки*/
+        top: 46px; /*Размер лево*/
+        right: 30px; /*Размер право*/
+    }
+
+    .nav.open .nav-button {
+        position: fixed; /*Позиция кнопки фиксированная*/
+    }
+
+    .header-nav {
+        margin-bottom: 50px; /*Отступ контента от верха*/
+    }
+
+    .header-row {
+        flex-direction: column; /*Контент перестраивается в колонку*/
+        row-gap: 20px; /*Отступ контента от фотографии*/
+    }
+
+    .header-content {
+        margin-top: 0; /*Подтягиваем контент к верху*/
+    }
+
+    .header-img {
+        text-align: center; /*Размещение фотографии по центру*/
+    }
+}
+
+@media (max-width: 700px) {
+    .header-heading {
+        font-size: 34px; /*Первая строка главного заголовка (имя), размер шрифта*/
+        line-height: 1.3; /*Плотность букв текста друг к другу */
+    }
+
+    .header-heading span {
+        font-size: 28px; /*Вторая строка заголовка (профессия), размер шрифта*/
+    }
+
+    .services {
+        padding: 60px 0; /*Отступы между блоками сервис*/
+    }
+
+    .portfolio {
+        padding: 60px 0; /*Отступы между картинками*/
+    }
+
+    .portfolio-title {
+        margin-bottom: 50px; /*Отступ от заголовка*/
+    }
+
+    .progect-img {
+        margin-bottom: 30px; /*Отступ от картинки до ссылки*/
+    }
+
+    .progect + .progect {
+        margin-top: 55px; /*Отступ между проектами*/
+    }
+
+    .contacts {
+        padding: 60px 0; /*Отступ контента*/
+    }
+
+    .contacts-title {
+        margin-bottom: 20px; /*Отступ от загаловка*/
+    }
+
+    .contacts-content {
+        margin-bottom: 20px; /*Отсткп контента от пунута Контакты*/
+    }
+
+    .contacts-button {
+        margin-bottom: 70px; /*Отступ кнопки от нижнего контента*/
+    }
+
+    .contacts-social {
+        column-gap: 50px; /*Отступ друг от друга*/
+        margin-bottom: 20px; /*Отступ щт социальных сетей до нижнего контента*/
+    }
+}

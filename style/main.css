@@ -1,0 +1,230 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    color: #000; /*Цвет текста во всём проекте черный*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /*Размер шрифтов контента*/
+}
+
+.container {
+    max-width: 1230px; /*Ширина контейнера с лого и меню*/
+    padding: 0 30px; /*Отступы по бокам для адаптации*/
+    margin: 0 auto; /*Выравнивание контейнера автоматически при растягивании*/
+}
+
+.title-1 {
+    font-size: 34px; /*Размер шрифта заголовка Portfolio*/
+    font-weight: 600; /*Толщина шрифта заголовка Portfolio*/
+}
+
+.btn {
+    display: inline-block; /*Добавление блока кнопки с регулируемой шириной в зависимомти от размера текста*/
+    padding: 7px 22px; /*Размер кнопки: верх и низ по 7, лево и право 22*/
+    background-color: #070707; /*Цвет кнопки*/
+    border-radius: 30px; /*Радиус скругления кнопок 30*/
+
+    font-size: 18px; /*Размер шривта на кнопке*/
+    color: #fff; /*Цвет текста в кнопке*/
+
+    transition: background-color o.2s ease-in, top 0.2s ease-in; /*Задали плавность анимации кнопки при нажатии*/
+}
+
+.btn:hover, .btn:focus {
+    background-color: #323232; /*Анимация кнопки при наведении (затемнение)*/
+}
+
+.btn:active {
+    position: relative; /*Легкое смещение кнопки при нажатии*/
+    top: 1px; /*Глубина нажатия кнопки*/
+    background-color: #000000; /*Смена цвета кнопки при нажатии в черный*/
+}
+
+/*Header*/
+
+.header {
+    padding-top: 46px;
+    background-color: #f1f1f1;
+}
+
+.header-nav {
+    display: flex; /*Выравнивание текста меню в одну строку*/
+    justify-content: space-between; /*Распределение текста по краям*/
+    align-items: flex-end; /*Вертикальное выравнивание меню по нижниму краю логотипа*/
+
+    margin-bottom: 76px; /*Отступ контента от блока Header*/
+}
+
+.logo {
+    position: relative;
+    padding: 0 12px 3px 0; /*Разметка точки слева  и право от лого*/
+    
+    font-weight: 700; /*Толщина шрифта Логотипа*/
+    font-size: 32px; /*Размер шрифта Логотипа*/
+    line-height: 1; /*Подвигаем точку к углу последней буквы*/
+    color: #000; /*Цвет текста Логотипа*/
+}
+
+/*Псевдо элемент круглая оранжевая точка*/
+.logo::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    content: ""; 
+    display: block; /*Мелкая точка ввиде квадрата*/
+    width: 8px; /*Размер лево 8*/
+    height: 8px; /*Размер право 8*/
+    background-color: #fda300; /*Цвет обьекта*/
+    border-radius: 50%; /*Скругление обьекта по краям*/
+}
+
+/*Навигация*/
+.nav-list {
+    display: flex; /*Вытягивание меню в одну строчку*/
+    column-gap: 50px; /*Отступ между функциями меню 50 пикселей*/
+    font-weight: 500; /*Толщина шрифта меню*/
+    font-size: 14px; /*Размер шрифта меню*/
+}
+
+.nav-button {
+    display: none; /*Скрытие кнопки меню мобильной версии*/
+}
+
+.nav-link {
+    color: #000; /*Цвет шрифта пунктов меню*/
+}
+
+/*Активность в пункте меню Home*/
+
+.nav-link.active {
+    color: #606060;
+}
+
+/*Блок Контент*/
+
+.header-row {
+    display: flex; /*Выравнивание в один ряд*/
+    justify-content: space-between; /*Раскидываем по сторонам*/
+    column-gap: 30px; /*Отступ по краям 30 пикселей*/
+}
+
+.header-content {
+    max-width: 500px; /*Ширина всего блока с контентом для адаптива*/
+    margin-top: 124px;
+}
+
+/*Стилизация контента <h1>*/
+
+.header-heading {
+    margin-bottom: 20px; /*Отступ между контентами <h1> и <p>*/
+    font-weight: 600; /*Толщина шрифта*/
+    font-size: 44px; /*Размер шрифта*/
+}
+
+/*Стилизация контента <p>*/
+
+.header-content p {
+    line-height: 2;
+}
+
+/*Стилизация карточки Service*/
+
+.services {
+    padding: 90px 0; /*Отступы секции сверху и снизу по 90, лево и право по 0*/
+}
+
+.services-row {
+    display: flex; /*Выстраиваем карточки в один ряд*/
+    column-gap: 30px; /*Отступы между картачками*/
+    row-gap: 60px;
+    flex-wrap: wrap; /*Адаптив, перенос карточек на следующий ряд*/
+}
+
+.service-card {
+    flex: 1 1 0;
+    min-width: 315px;
+}
+
+.service-card-img {
+    margin-bottom: 30px; /*Отступ изображения от нижнего контента*/
+}
+
+.service-card-title {
+    margin-bottom: 10px; /*Отступы между контентами*/
+    font-weight: 600; /*Толщина шрифта  в названии*/
+    font-size: 24px; /*Размер шрифта в названии*/
+    text-transform: uppercase; /*Заголовки в карточках с большой буквы*/
+}
+
+.service-card p {
+    line-height: 2; /*Размер шрифта контента*/
+}
+
+/*Стилизуем блок Portfolio*/
+
+.portfolio {
+    padding: 90px 0; /*Отступы заголовков от картинок, верх и низ 90, лево и право 0*/
+    background-color: #f1f1f1; /*Задаем фон блоку Портфолио*/
+}
+
+.portfolio-title {
+    margin-bottom: 70px; /*Отступ от заголовка до картинки вниз*/
+    text-align: center; /*Выравнивание заголовкa Portfolio по центру*/
+}
+
+.progect {
+    text-align: center; /*Выравнивание заголовков и картинок по центру*/
+}
+
+.progect + .progect {
+    margin-top: 90px; /*Отступ среднего проекта между проектами*/
+}
+
+.progect-img {
+    margin-bottom: 40px; /*Отступы между картинками*/
+}
+
+.progect-title {
+    font-size: 18px; /*Размер шрифта*/
+}
+
+.progect-title a {
+    color: #000; /*Цвет текста ссылок под картинками*/
+    text-decoration: underline; /*Подчеркивание текста ссылок под картинками*/
+}
+
+/*Стилизуем блок footer*/
+
+.contacts {
+    padding: 90px 0; /*Отступ надписи Контакты сверху и снизу 90, лево и право 0*/
+    text-align: center; /*Размещение основного блога Контакты по центру*/
+}
+
+.contacts-title {
+    margin-bottom: 40px; /*Отступ от пункта Контакты до контента*/
+}
+
+.contacts-content {
+    margin-bottom: 40px; /*Отсткп контента от пунута Контакты*/
+    font-size: 18px; /*Размер шрмфта в контенте*/
+}
+
+.contacts-button {
+    margin-bottom: 60px; /*Отступ кнопки от нижнего контента*/
+}
+
+.contacts-social {
+    display: flex; /*Выстраиваем иконки сетей в один ряд*/
+    justify-content: center; /*Размещение иконок по центру*/
+    align-items: center; /*Примерное выравнивание иконок с разными размерами по вертикали друг от друга*/
+    column-gap: 60px; /*Отступ друг от друга*/
+    margin-bottom: 40px; /*Отступ щт социальных сетей до нижнего контента*/
+}
+
+.contacts-footer {
+    color: #828282; /*Цвет нижнего контента футера*/
+}
+
+
+
